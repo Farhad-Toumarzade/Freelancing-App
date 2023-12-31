@@ -1,9 +1,11 @@
-import SendOTPForm from "../features/Authentication/SendOTPForm";
+import CheckOTPForm from "../features/Authentication/CheckOTPForm";
+// import SendOTPForm from "../features/Authentication/SendOTPForm";
 
 function Auth() {
   return (
     <div className="w-full sm:max-w-sm">
-      <SendOTPForm />
+      {/* <SendOTPForm /> */}
+      <CheckOTPForm />
     </div>
   );
 }
