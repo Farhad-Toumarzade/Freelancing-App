@@ -1,12 +1,12 @@
-import CheckOTPForm from "../features/Authentication/CheckOTPForm";
-// import SendOTPForm from "../features/Authentication/SendOTPForm";
+// import CheckOTPForm from "../features/Authentication/CheckOTPForm";
+import SendOTPForm from "../features/Authentication/SendOTPForm";
 
 function Auth() {
   return (
     <div className=" flex justify-center pt-10">
       <div className="w-full sm:max-w-sm">
-        {/* <SendOTPForm /> */}
-        <CheckOTPForm />
+        <SendOTPForm />
+        {/* <CheckOTPForm /> */}
       </div>
     </div>
   );
