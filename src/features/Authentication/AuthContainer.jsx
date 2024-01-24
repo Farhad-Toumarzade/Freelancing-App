@@ -6,7 +6,11 @@ import { getOtp } from "../../services/authServices";
 import { useMutation } from "@tanstack/react-query";
 
 function AuthContainer() {
-  const { isPending: isSendingOtp, mutateAsync } = useMutation({
+  const {
+    isPending: isSendingOtp,
+    mutateAsync,
+    data: otpResponse,
+  } = useMutation({
     mutationFn: getOtp,
   });
 
@@ -22,7 +26,7 @@ function AuthContainer() {
   };
 
   const [step, setStep] = useState(2);
-  const [phoneNumber, setPhoneNumber] = useState("09123499174");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const renderStep = () => {
     switch (step) {
@@ -40,6 +44,7 @@ function AuthContainer() {
       case 2:
         return (
           <CheckOTPForm
+            otpResponse={otpResponse}
             onReSendOtp={sendOtpHandler}
             phoneNumber={phoneNumber}
             onBack={() => setStep((s) => s - 1)}
