@@ -1,5 +1,11 @@
+import CompleteProfileForm from "../features/Authentication/CompleteProfileForm";
+
 function CompleteProfile() {
-  return <div>CompleteProfile</div>;
+  return (
+    <div>
+      <CompleteProfileForm />
+    </div>
+  );
 }
 
 export default CompleteProfile;
